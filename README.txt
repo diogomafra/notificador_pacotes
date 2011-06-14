@@ -1,8 +1,8 @@
 Notificador de pacotes (Correios)
 =================================
 
-Este projeto È uma extens„o do Google Chrome que notifica quando h· alteraÁıes no status de entrega de um pacote nos correios.
+Este projeto √© uma extens√£o do Google Chrome que notifica quando h√° altera√ß√µes no status de entrega de um pacote nos correios.
 
-Criei esse projeto apenas para testes e para aprender como funcionam as extensıes do Chrome.
+Criei esse projeto apenas para testes e para aprender como funcionam as extens√µes do Chrome.
 
-Para maiores informaÁıes a respeito das extensıes do Chrome, visite esse link: http://code.google.com/chrome/extensions/getstarted.html
+Para maiores informa√ß√µes a respeito das extens√µes do Chrome, visite esse link: http://code.google.com/chrome/extensions/getstarted.html
