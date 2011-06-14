@@ -1,0 +1,62 @@
+<link href="popup.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-1.6.min.js"></script>
+<script type="text/javascript" src="jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="pack.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+
+<script id="packageTemplate" type="text/x-jquery-tmpl">
+    <div class="package">
+	<div class="comandos">
+		<a href="#" onclick="showPackageDetails('${code}')"><img title="Exibir detalhes" src="detail.png" width="16" height="16" /></a>
+		<a href="#" onclick="removePackage('${code}')"><img title="Remover pacote" src="delete.png" width="16" height="16" /></a>
+	</div>
+	<span class="packageName">${name}</span> <span class="packageCode">(${code})</span><br/>
+	${lastStatusDate} - <span class="status" title="${lastStatusDesc}">${lastStatusName}</span>
+	</div>
+</script>
+
+<script id="packageDetailsTemplate" type="text/x-jquery-tmpl">
+	<a href="#" onclick="backToList()" class="backLink">Voltar</a>
+    <span class="packageDetailTitle">Código:</span> ${code}<br/>
+    <span class="packageDetailTitle">Nome:</span> ${name}<br/>
+    <table border="0" class="detailStatuses">
+		<col />
+		<col width="100" />
+		<col />
+		<tr>
+			<th>Data</th>
+			<th>Situação</th>
+			<th>Descrição</th>
+		</tr>
+		{{each statuses}}
+		<tr>
+			<td class="dateColumn">${$value.date}</td>
+			<td class="statusColumn">${$value.status}</td>
+			<td>${$value.description}</td>
+		</tr>
+		{{/each}}
+    </table>
+</script>
+
+<div id="defaultScreen">
+	<form >
+		<fieldset>
+			<legend>Adicionar pacote</legend>
+			<table cellspacing="0" cellpadding="0" style="margin-top: 4px">
+			<tr>
+				<td>Código</td>
+				<td>Nome (opcional)</td>
+			</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="packageCode" /></td>
+				<td><input type="text" id="packageName" /></td>
+				<td rowspan="2"><input type="submit" onclick="addPackage()" value="Adicionar" /></tr>
+			</table>
+		</fieldset>
+	</form>
+	<div id="packageList" >
+	</div>
+</div>
+<div id="packageDetails">
+</div>

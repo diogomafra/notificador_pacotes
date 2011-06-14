@@ -1,0 +1,76 @@
+﻿body {
+  min-width:350px;
+  min-height: 180px;
+  overflow-x:hidden;
+  font-family: Arial;
+  font-size: 11px;
+}
+
+* {
+  font-family: Arial;
+  font-size: 11px;
+}
+
+#packageList{
+	margin-top: 10px;
+	overflow-y:auto;
+	max-height: 300px;
+}
+
+fieldset{
+	border: 1px solid #DDDDDD;
+	margin: 0px;
+}
+
+.package {
+	margin-bottom: 8px;
+}
+
+.status{
+	font-weight: bold;
+}
+
+.packageName{
+	font-style:italic;
+}
+
+.packageCode{
+	color: #008800;
+}
+
+.noPackages{
+	text-align:center;
+}
+	
+.detailStatuses {
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+	
+.detailStatuses, .detailStatuses td, .detailStatuses th{
+	border: 1px solid #DDDDDD;
+}
+
+.dateColumn {
+	text-align:center;
+	white-space:nowrap;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.statusColumn{
+	text-align:center;
+}
+
+.packageDetailTitle{
+	font-weight: bold;
+}
+
+.comandos {
+	float:left;
+	margin: 5px;
+}
+
+.backLink{
+	float:right
+}

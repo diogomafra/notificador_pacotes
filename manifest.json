@@ -1,0 +1,17 @@
+﻿{
+  "name": "Notificador de pacotes (Correios)",
+  "version": "1.0",
+  "description": "Teste de uma extensão que notifica quando há alterações no status de entrega de um pacote nos correios.",
+  "icons": { "48": "package_48.png", "128": "package.png" },
+  "browser_action": {
+    "default_icon": "package_48.png",
+     "name":"Pacotes monitorados (Correios)",
+     "popup": "popup.html"
+  },
+   "background_page": "background.html",
+   "options_page": "options.html",
+  "permissions": [
+    "http://websro.correios.com.br/",
+    "notifications"
+  ]
+}

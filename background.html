@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.6.min.js"></script>
+<script type="text/javascript" src="pack.js"></script>
+<script>
+	var packs = new Packages();
+	
+	packs.packageInfoUpdated = function (){
+		var views = chrome.extension.getViews();
+		for (var i = 0; i < views.length; i++) {
+		  var view = views[i];
+		  if (view.location.href.indexOf("popup.html") != -1) {
+			view.updatePackageScreen();
+			break;
+		  }
+		}
+	};
+
+	packs.packageStatusUpdated = function(packageCode, info){
+		var msg = 'O status do pacote ' + packageCode + ' foi alterado para "' + info.statuses[0].status + '" às ' + info.statuses[0].date + '.';
+		var notification = webkitNotifications.createNotification('package.png', 'Status alterado', msg);
+		notification.show();
+	}
+
+	packs.starMonitoring();
+</script>
+</head>
+</html>
